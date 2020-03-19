@@ -2,7 +2,7 @@ package com.omertex.test.app.di
 
 
 import com.omertex.mvprx.data.network.interceptors.NetworkCheckInterceptor
-import com.omertex.test.app.data.datasource.api.PlaceHolderFakeApi
+import com.omertex.test.app.data.datasource.api.PlaceHolderApi
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -32,7 +32,7 @@ class InjectPlaceholder(
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .build()
 
-    fun providePlaceHolderApi(): PlaceHolderFakeApi =
-        provideRetrofitInstance().create(PlaceHolderFakeApi::class.java)
+    fun providePlaceHolderApi(): PlaceHolderApi =
+        provideRetrofitInstance().create(PlaceHolderApi::class.java)
 
 }
