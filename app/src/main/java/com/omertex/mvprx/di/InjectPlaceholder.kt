@@ -33,6 +33,7 @@ class InjectPlaceholder(
         .build()
 
     fun providePlaceHolderApi(): PlaceHolderApi =
-        provideRetrofitInstance().create(PlaceHolderApi::class.java)
+        provideRetrofitInstance()
+            .create(PlaceHolderApi::class.java)
 
 }

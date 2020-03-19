@@ -10,7 +10,6 @@ import java.net.UnknownHostException
 
 class NetworkCheckInterceptor(private val networkChecker: NetworkChecker) : Interceptor {
 
-
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
         val requestBuilder = chain.request().newBuilder()
