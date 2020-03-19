@@ -1,6 +1,7 @@
 package com.omertex.test.app.di
 
 
+import com.omertex.test.app.data.datasource.api.UnsplashApi
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -28,7 +29,7 @@ object InjectUnsplash {
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .build()
 
-//    fun provideUnsplashApi(): UnsplashApi =
-//        provideRetrofitInstance()
-//            .create(UnsplashApi::class.java)
+    fun provideUnsplashApi(): UnsplashApi =
+        provideRetrofitInstance()
+            .create(UnsplashApi::class.java)
 }

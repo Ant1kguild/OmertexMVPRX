@@ -33,6 +33,16 @@ android {
         jvmTarget = "1.8"
     }
 
+    Properties my_properties = new Properties()
+    def propertiesFile = project.rootProject.file('local.properties')
+    if (propertiesFile.exists()) {
+        my_properties.load(propertiesFile.newDataInputStream())
+        defaultConfig {
+            buildConfigField('String', 'KEY_API_ACCESES', "\"${my_properties.getProperty('key.acceses')}\"")
+            buildConfigField('String', 'KEY_API_SECRET', "\"${my_properties.getProperty('key.secret')}\"")
+        }
+    }
+
 }
 
 dependencies {
