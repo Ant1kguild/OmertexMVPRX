@@ -28,22 +28,11 @@ class MergePresenter(
     private fun loadData() {
         viewState.showLoadingProgress()
         getMergeListUseCase.execute()
-            .observeOn(schedulersProvider.ui())
             .subscribe(this::onDataLoad, this::onDataLoadError)
     }
 
     private fun onDataLoad(data: Pair<List<User>, List<Photo>>) {
-        //viewState.setDataToRecycleView()
-
-    }
-
-    private fun onDataLoadError(throwable: Throwable) {
-
-    }
-
-
-    private fun getMergeModel(data: Pair<List<User>, List<Photo>>) {
-        val dd = Observable.zip(
+        Observable.zip(
                 Observable.fromIterable(data.first),
                 Observable.fromIterable(data.second),
                 BiFunction { user, photo ->
@@ -55,8 +44,16 @@ class MergePresenter(
             .observeOn(schedulersProvider.ui())
             .subscribe({
                 viewState.setDataToRecycleView(it)
-            }, {})
+                viewState.hideLoadingProgress()
+                viewState.showRecycleView(true)
+            }, {
+                //TODO
+            })
+
     }
 
+    private fun onDataLoadError(throwable: Throwable) {
+
+    }
 
 }
