@@ -21,7 +21,6 @@ class InjectUnsplash(
     private fun provideClient(): OkHttpClient = OkHttpClient()
         .newBuilder()
         .addInterceptor(loggingInterceptor)
-        //.addInterceptor(networkCheckInterceptor)
         .build()
 
     private fun provideRetrofitInstance(): Retrofit = Retrofit.Builder()
