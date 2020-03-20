@@ -33,6 +33,10 @@ android {
         jvmTarget = "1.8"
     }
 
+    dataBinding {
+        enabled true
+    }
+
     Properties my_properties = new Properties()
     def propertiesFile = project.rootProject.file('local.properties')
     if (propertiesFile.exists()) {
