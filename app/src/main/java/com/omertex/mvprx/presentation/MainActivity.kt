@@ -1,7 +1,8 @@
-package com.omertex.mvprx
+package com.omertex.mvprx.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.omertex.mvprx.R
 
 class MainActivity : AppCompatActivity() {
 
