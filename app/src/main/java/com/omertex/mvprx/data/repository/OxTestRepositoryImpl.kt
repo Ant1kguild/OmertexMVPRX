@@ -1,6 +1,7 @@
 package com.omertex.mvprx.data.repository
 
 import com.omertex.mvprx.domain.repositories.OxTestRepository
+import com.omertex.mvprx.presentation.mvp.global.SchedulersProvider
 import com.omertex.test.app.data.datasource.PlaceHolderDataSource
 import com.omertex.test.app.data.datasource.UnsplashDataSource
 import com.omertex.test.app.data.model.placeholder.User

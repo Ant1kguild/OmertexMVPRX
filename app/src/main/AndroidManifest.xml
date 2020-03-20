@@ -5,16 +5,16 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
-        android:name="com.omertex.mvprx.App"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.ui.MergeActivity">
+
+        <activity android:name=".presentation.ui.merge.MergeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presentation.ui.DetailsActivity" />
-
+        <activity android:name=".presentation.ui.details.DetailsActivity" />
     </application>
 
 </manifest>

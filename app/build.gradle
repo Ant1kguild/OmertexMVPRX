@@ -72,10 +72,17 @@ dependencies {
     implementation("com.github.moxy-community:moxy:$moxy_version")
     kapt("com.github.moxy-community:moxy-compiler:$moxy_version")
     implementation("com.github.moxy-community:moxy-androidx:$moxy_version")
+    implementation("com.github.moxy-community:moxy-ktx:$moxy_version")
 
     //RX
     implementation("io.reactivex.rxjava3:rxjava:$rx_version")
     implementation("io.reactivex.rxjava3:rxandroid:$rx_android_version")
+
+    //RxBinding
+    implementation("com.jakewharton.rxbinding3:rxbinding:$rx_binding_version")
+    implementation("com.jakewharton.rxbinding3:rxbinding-core:$rx_binding_version")
+    implementation("com.jakewharton.rxbinding3:rxbinding-appcompat:$rx_binding_version")
+    implementation("com.jakewharton.rxbinding3:rxbinding-recyclerview:$rx_binding_version")
 
     //Coil - image loading library
     implementation("io.coil-kt:coil:$coil_version")

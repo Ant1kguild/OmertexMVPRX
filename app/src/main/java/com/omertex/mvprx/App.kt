@@ -14,13 +14,7 @@ class App : Application() {
             androidLogger()
             androidContext(this@App)
             modules(
-                listOf(
-                    interceptorModule,
-                    apiModule,
-                    dataSourceModule,
-                    repositoryModule,
-                    useCaseModule
-                )
+                listModules
             )
         }
     }
